@@ -10,8 +10,8 @@ function App() {
   // Função para buscar o clima
   const buscarClima = () => {
     setErro(null); // Limpar erro anterior ao buscar o clima
-    console.log('Buscando clima para:', cidade); // Exibe a cidade digitada
-    const apiKey = 'b327ba760699b46c7aef0f7e35ed1ff9'; // Substitua pela sua chave de API
+    console.log('Buscando clima para:', cidade); 
+    const apiKey = 'b327ba760699b46c7aef0f7e35ed1ff9'; 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${apiKey}&units=metric&lang=pt_br`;
 
     axios.get(url)
@@ -27,7 +27,7 @@ function App() {
   // Função para obter a previsão do tempo para os próximos 5 dias
   const buscarPrevisao5Dias = () => {
     setErro(null);
-    const apiKey = 'b327ba760699b46c7aef0f7e35ed1ff9'; // Substitua pela sua chave de API
+    const apiKey = 'b327ba760699b46c7aef0f7e35ed1ff9'; 
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${cidade}&appid=${apiKey}&units=metric&lang=pt_br`;
 
     axios.get(url)
@@ -47,7 +47,7 @@ function App() {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
 
-        const apiKey = 'b327ba760699b46c7aef0f7e35ed1ff9'; // Substitua pela sua chave de API
+        const apiKey = 'b327ba760699b46c7aef0f7e35ed1ff9';
         const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric&lang=pt_br`;
 
         axios.get(url)
@@ -117,7 +117,7 @@ function App() {
               {forecast.main && forecast.main.temp !== undefined ? (
                 <p>Temperatura: {forecast.main.temp}°C</p>
               ) : (
-                <p>Temperatura indisponível</p> // Mensagem caso a temperatura não esteja disponível
+                <p>Temperatura indisponível</p> 
               )}
 
               {/* Verificação para forecast.weather[0].description */}
