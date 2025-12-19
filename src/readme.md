@@ -22,3 +22,5 @@ Este é um aplicativo de clima simples desenvolvido com **React** e a API **Open
 Clone este repositório para a sua máquina local:
 ```bash
 git clone https://github.com/robertabrasil022/weather-app-react.git
+
+Você pode ver a versão ao vivo do aplicativo aqui: [Weather App - Vercel](https://weather-app-react-kappa-henna.vercel.app)
